@@ -119,6 +119,7 @@ public class KafkaMessageChannelBinder extends
 	public KafkaMessageChannelBinder(KafkaBinderConfigurationProperties configurationProperties,
 			KafkaTopicProvisioner provisioningProvider) {
 		super(false, headersToMap(configurationProperties), provisioningProvider);
+		setHeaderPatterns(configurationProperties.getHeaderPatterns());
 		this.configurationProperties = configurationProperties;
 	}
 

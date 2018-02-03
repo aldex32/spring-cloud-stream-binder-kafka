@@ -55,6 +55,8 @@ public class KafkaBinderConfigurationProperties {
 
 	private String[] headers = new String[] {};
 
+	private String[] headerPatterns = new String[] {};
+
 	private int offsetUpdateTimeWindow = 10000;
 
 	private int offsetUpdateCount;
@@ -108,6 +110,10 @@ public class KafkaBinderConfigurationProperties {
 		return this.headers;
 	}
 
+	public String[] getHeaderPatterns() {
+		return headerPatterns;
+	}
+
 	public int getOffsetUpdateTimeWindow() {
 		return this.offsetUpdateTimeWindow;
 	}
@@ -146,6 +152,10 @@ public class KafkaBinderConfigurationProperties {
 
 	public void setHeaders(String... headers) {
 		this.headers = headers;
+	}
+
+	public void setHeaderPatterns(String[] headerPatterns) {
+		this.headerPatterns = headerPatterns;
 	}
 
 	public void setOffsetUpdateTimeWindow(int offsetUpdateTimeWindow) {
